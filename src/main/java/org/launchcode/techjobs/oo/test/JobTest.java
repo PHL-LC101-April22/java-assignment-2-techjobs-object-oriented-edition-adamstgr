@@ -28,10 +28,10 @@ public class JobTest {
     public void testJobConstructorSetsAllFields(){
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals("Product tester", job.getName());
-        assertEquals(new Employer("ACME"), job.getEmployer());
-        assertEquals(new Location("Desert"), job.getLocation());
-        assertEquals(new PositionType("Quality control"), job.getPositionType());
-        assertEquals(new CoreCompetency("Persistence"), job.getCoreCompetency());
+        assertEquals("ACME", job.getEmployer().toString());
+        assertEquals("Desert", job.getLocation().toString());
+        assertEquals("Quality control", job.getPositionType().toString());
+        assertEquals("Persistence", job.getCoreCompetency().toString());
         assertTrue(job.getName() instanceof String);
         assertTrue(job.getEmployer() instanceof Employer);
         assertTrue(job.getLocation() instanceof Location);
